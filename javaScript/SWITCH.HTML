@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div  >
+<button id="Main" onclick="printGrade()"></button>
+    </div>
+    <script>
+
+        function printGrade(age){
+            Math.floor(Math.random()*9)
+            switch(age){
+                case 1:
+                Main.innerHTML=`נמוך מידי`;
+                break;
+                case 2:
+                Main.innerHTML=`כמעט אבל לא`;
+                break;
+                case 3:
+                Main.innerHTML=`עוד קצת והיית זוכה`;
+                break;
+                case 4:
+                Main.innerHTML=`זכית במקום הראשון`;
+                break;
+                case 5:
+                Main.innerHTML=`הגזמת,יותר מידי`;
+                break;
+                case 6:
+                Main.innerHTML=`עוד קצת,אולי מקום שני`;
+                break;
+                case 7:
+                Main.innerHTML=`ברכות ! מקום שני`;
+                break;
+                case 8 :
+                Main.innerHTML=`מקום שלישי`;
+                break;
+
+                default:
+                Main.innerHTML="N/A grade";
+            }
+        }
+        printGrade(age)
+  
+        // var caseAge = Math.floor(Math.random() * 10);
+        // switch (caseAge) {
+        //     case 1:
+        //         divMain.innerHTML = "SENDING SPIDERMAN" + caseAge;
+        //         break;
+        //     case 2:
+        //         divMain.innerHTML = "SENDING IRONMAN" + caseAge;
+        //         break;
+        //     case 3:
+        //         divMain.innerHTML = "SENDING HALK" + caseAge;
+        //         break;
+        //     case 4:
+        //         divMain.innerHTML = "SENDING WOLBRIN" + caseAge;
+        //         break;
+        //     case 5:
+        //         divMain.innerHTML = "SENDING BLACK PANTER" + caseAge;
+        //         break;
+           
+        //     default:
+        //         divMain.innerHTML
+
+        // }
+    
+        
+   
+    </script>
+</body>
+</html>

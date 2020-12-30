@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+    <style>
+        #img {
+            width: 200px;
+            height: 200px;
+            margin: 300p;
+            position: relative;
+        }
+
+        #button {
+            position: absolute;
+            background-attachment: fixed;
+        }
+
+     
+    </style>
+</head>
+
+<body>
+
+
+    <button id="next"> next</button>
+    <img id="img" src="/Imges/5.jpg">
+    <button id="prev">prev</button>
+    <button id="stop1">stop</button>
+   
+
+    <script>
+
+        // הגדרת משתנים
+        let index = 1
+        document.getElementById("next").addEventListener("click", () => changePic());
+        document.getElementsByTagName("button")[1].addEventListener("click", () => changePic("+"));
+        let img = document.getElementById("img")
+        let stop = setInterval(changePic, 3000);
+        let stopInterval = document.getElementById("stop1").addEventListener("click", () => clearInterval(stop))
+        //  document.querySelector("dot").addEventListener("click",()=> changePic())
+
+        var picArray = [
+
+            "/Imges/1.jpg" ,
+            "/Imges/2.jpg" ,
+             "/Imges/3.jpg",
+             "/Imges/4.jpg" 
+
+
+    ]
+        
+        function changePic(action) {
+                if (action == "+") {
+                    next()
+                } else {
+                    prev()
+                } document.getElementById("img").src = picArray[index]
+
+
+            }
+        function next() {
+                index++;
+                if (index >= picArray.length) {
+                    index = 0;
+                }
+
+
+
+            }
+        function prev() {
+                index--;
+                if (index < 0) {
+                    index = picArray.length - 1;
+                }
+
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>calculator</title>
+</head>
+<body>
+
+    <div id="btnDiv">
+ 
+
+   </div>
+   <script>
+       class Numbutton{
+           id;
+           event;
+           value;
+           constructor( id,event,value){
+               this.id=id;
+               this.event=event;
+               this.value=value;
+           }
+           btnClick(){
+           console.log(this.value);
+       }
+       }
+       let buttenArray=[];
+       for(let i=1 ;i<10 ;i++){
+        const btnObject =new Numbutton(`btn${i}`,()=>{ },i)
+        buttenArray.push(btnObject);
+       
+       }
+buttenArray.forEach(btnItem =>{
+    btnDiv.innerHTML+=`<button id="${btnItem.id}" value="${btnItem.value}">${btnItem.value}</button>`
+})
+       
+       buttenArray.forEach(btnItem =>{
+document.getElementById(btnItem.id).addEventListener("click",()=>{
+    btnItem.btnClick()
+})
+       })
+     
+   </script>
+</body>
+</html>

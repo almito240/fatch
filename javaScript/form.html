@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="formid"></form>
+
+
+    <script>
+
+
+        var FormElement = document.getElementById("formid")
+
+        var field = ["firstname", "lastname","email"]
+
+        function creatFields(fieldaName) {
+            for (let i = 0; i < fieldaName.length; i++) {
+                FormElement.innerHTML += `<div id=${fieldaName[i]}div><label for="${fieldaName[i]}lable"><span style="display: none;">*</span>${fieldaName[i]}</label><input id="${fieldaName[i]}" type="text"><span id="${fieldaName[i]}"></span>
+</div>`
+
+            }
+        }
+        creatFields(field)
+
+
+    </script>
+
+</body>
+
+</html>

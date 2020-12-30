@@ -1,0 +1,22 @@
+#main{
+    display: flex;
+
+    text-align: center;
+    margin: 20px,auto;
+ 
+
+}
+
+.card{
+     border: 2px solid blue;
+    border-radius: 20px;
+   padding: 20px;
+   width: 200px;
+   height: 300px;
+   margin-right: 20px;
+   text-align: center;
+   font-size: 40px;
+   background: rgb(55,34,195);
+background: linear-gradient(0deg, rgba(55,34,195,1) 0%, rgba(236,45,253,1) 100%); 
+}
+

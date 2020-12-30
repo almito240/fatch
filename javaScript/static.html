@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- 1.	צרו מחלקה עם 3 שדות ופונקציה סטטית אחת,2 שדות טקסט ושדה מספר אחד, הפונקציה היא פונקציית 
+ותאמת לפי הנתונים שהמחלקה מקבלת בבנאי. לדוג': במידה והמספר הוא 1000 אז המספר שיחזור יהיה בין 0 ל 999 . 
+2.	כתבו תוכנית שמקבלת מהמשתמש נתונים של שם, סיסמה, מייל ושם משתמש. 
+התוכנית משווה בין שני אובייקטים, כדי לקבוע האם הראשון מכיל ערכי מאפיינים שווי ערך לזה השני
+. אחד מהאובייקטים ניצור ידנית בקוד (הארדקודד). -->
+<body>
+    <script>
+        class Point{
+            x;
+            y;
+            constructor(paramx,paramy){
+                this.x=paramx;
+                this.y=paramy;
+            }
+            static distance(fiPoint,sePoint){
+            const distancex=fiPoint.x-sePoint.x;
+            const distanceY=sePoint.y-fiPoint.y;
+            return Math.hypot(distancex,distanceY)
+        }
+        }
+        const firstPoint=new Point(10,17);
+        const secondPoint=new Point(8,5);
+        console.log(firstPoint);
+        console.log(secondPoint);
+     
+        console.log(Point.distance(firstPoint, secondPoint));
+    </script>
+</body>
+</html>

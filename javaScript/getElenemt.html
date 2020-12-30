@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+di1. ליצור אלמנט ראשי עם ID
+2. להוסיף אלמנט של קלט
+3. להוסיף אלמנט של כפתור
+4. בלחיצה על הכפתור ליצור אלמנטים של רשימה בצורה דינמית כמספר הקלט -->
+ 5. לעשות עיצוב לאלמנטים של הרשימה 
+
+
+
+<body>
+ <div id="main"></div>
+ <input id="myinput" type="text">הכנס מספר 
+ <button onclick="click1()"></button>    -->
+
+ <div main id="main1">
+<p>change style</p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+</div>
+
+<div main id="main2">
+
+</div>
+<div> </div>
+<div> </div>
+
+ <script>
+
+let mainDiv=document.getElementById("main")
+let inPut1=document.getElementById("myinput")
+let valueInput;
+let mainlist=document.getElementById("list")
+mainDiv.innerHTML+="<ol id=list</ol>"
+
+function click1(){
+    valueInput=inPut1.value
+ for(let i= 0; i<value;i++){                                                             // 1. ליצור 5 אלמנטים כאשר 3 מהם זהים
+// 2. תצרו משתנה שתופס את הזהים כמערך
+// 3. תשנו להם את העיצוב לפי השיטה שראינו היום   
+    mainDiv.innerHTML+=`<li><img src="${i}.jpg"</li>`
+ } 
+
+
+
+
+var divTwo=document.getElementsByTagName("div")[1];
+for ( i = 0; i <= 5; i++) {
+   divTwo.innerHTML+=`<h1> this is no#1${i}</h1>`;
+}
+ 
+  divTwo.firstChild.style.color="yellow"  
+  divTwo.childNodes[2].innerHTML="hola" 
+
+
+
+var inputElement = document.getElementById("inputId");//   נותנים שם משתנה לאי.די מהטמל 
+   var mainDiv = document.getElementById("someIdName"); //גם כאן נותנים משתנה לדיב מהטמל
+
+   var inputValue;// משאירים משתנה ריק כדי שנוסיף אותו אחכ לפונקציה
+   
+   function clickEvent() { // בהטמל נמצא כפתור וברגע שלוחצים עליו הוא מפעיל פונקציה 
+       inputValue = inputElement.value;// אותו משתנה הנל מקבל ערך ששווה למספר שקיבלנו מהמשתמש ווליו
+       console.log(inputValue);
+       createList()
+       listStyle()
+   }
+   
+   function createList() { // איך אני יוצרת רשימה מתוך הגבה סקריפט: יוצרת פונקציה 
+       
+       mainDiv.innerHTML += '<ol id="olElement">list : </ol>';//+= קוראת לדיב שאני רוצה לבצע שינויים מוסיפה לו אינר הטמל 
+       var listElement = document.getElementById("olElement");// (document...) אחריי שיצרתי אי די בתוך הדיב למעלה אני נותנת לו שם משתנה וקוראת לו לפי האי די
+       for (let index = 1; index <= inputValue; index++) {//בגלל שמדובר באותה פעולה שצריך לבצע כמה פעמים נשתמש בלולאה שתעבור ותיצור לי רשימה
+           listElement.innerHTML += 
+               `<li id="liElemNo${index}"> 
+           <img class="liElemClass" src="./1${index}.jfif"/>            
+       </li>`
+    //    }//של מספר התמונות שקיבלנו מהמשתמש לדוג' אם קיבלנו ערך של 5 תמונות  בפעם הראשונה היא תרוץ פעם אח,
+   }// ותציג תמונה אחת עד שהיא תגיע לערך הקטן או שווה מה inputvalue  ו
+//   בסוף הלולאה נשים את האלמנט ששייך לאי די בתוספת שך += ונוסיף תומנות עם הדולר ( הערך שמצויין במקרה הזה תמונה )
+  
+  
+  
+   function listStyle() {//  איך לעצב את הרשימה : יוצרים פונקציה ,נותנים לאלמנט השמה עם (של הרשימה מלמעלה )קריאת קלאס  ( docum...)
+       var liElements = document.getElementsByClassName("liElemClass");
+       for (let i = 0; i < liElements.length; i++) {// יוצרים לולאה הפעם כדיי לתת מאפיינים של  סי אס אס לכל תמונה שתרוץ בלולאה
+           liElements[i].style = "height: 150px;";//  לקראת סיום כל הרצה נוסיף את האלמנט של הרשימה ונציין שהעיצוב נעשה במקום האיי נקודה סטייל
+    //    }// בתוספת העיצוב הרצוי 
+//   }// לבסוף נקרא לשתיי הפונקציות של גם של יצירת אלמנט  המתוך הגבה סקריפט וגם פונקצייה של עיצוב האלמנט
+//ונוסיף אותן לפונקציה של הכפתור שמפעיל  בעצם את כל האירוע 
+       
+    
+</script>
+</body>
+</html>

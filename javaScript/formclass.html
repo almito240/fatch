@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+  <label for="fname">first name:</label>
+        <input type="text" name="fname" id="firstName"><span id="fnameSpan"></span><br />
+        <label for="lname">last name:</label>
+        <input type="text" name="lname" id="lastName"><span id="lnameSpan"></span><br />
+        <label for="email">email:</label>
+        <input type="email" name="email" id="email"><span></span><br /> 
+        <label for="phone">phone number:</label>
+        <input type="tel" name="phone" id="phone"><span></span><br />
+        <label for="age">age:</label>
+        <input type="age" name="age" id="age"><span></span><br /> 
+
+         <button id="btn" onclick="makeTable()">submit</button> 
+<table id="myTable"></table>
+    
+<script>
+    
+    
+
+class Person {
+    firstName;
+    lastName;
+    email;
+    phonNumber;
+    age;
+    constructor(first_Name, last_Name, email, phon_Number, age) {
+        this.firstName = first_Name
+        this.lastName = last_Name
+        this.email = email
+        this.phonNumber = phon_Number
+        this.age = age
+
+    }
+    get fullName() {
+        return createFullName();
+    }
+    createFullName() {
+        return `mr.${this.firstName}${this.lastName}`
+    }
+}
+
+
+function makeTable() {
+    myTable.innerHTML += `<tr id="keysTr"></tr><tr id="ValuesTr></tr>`
+    const inputFromUser = new Person(firstName.value, lastName.value, email.value, phone.value, age.value);
+    for (const key in inputFromUser) {
+        keysTr.innerHTML += `<td>${key}</td>`
+        valuesTr.innerHTML += `<td>${inputFromUser[key]}<td>`
+    }
+    console.log(inputFromUser);
+}
+</script>
+</body>
+</html>
+      

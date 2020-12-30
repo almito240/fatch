@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="formElement"></form>
+
+    <script>
+
+           class Person {
+                firstName;
+                lastName;
+                email;
+                phonNumber;
+                age;
+                constructor(first_Name="", last_Name="", email="", phon_Number="", age="") {
+                    this.firstName = first_Name;
+                    this.lastName = last_Name;
+                    this.email = email;
+                    this.phonNumber = phon_Number;
+                    this.age = age;
+
+                }
+
+        get fullName() {
+            return this.createFullName();
+        }
+        createFullName() {
+            return `mr.${this.firstName}${this.lastName}`
+        }
+        }
+
+
+
+           let person1=new Person();
+           for (const personKey in person1){
+            formElememt.innerHTML+=`${personKey}: <br/><input type="text" name="${personKey}"id="${personKey}id"><br/>`
+
+           }
+           let fields=["first_Name","last_Name", "email","phon_Number","age"];
+           fields.forEach((fieldItem)=>{
+            formElememt.innerHTML+=`${fieldItem}: <br/><input type="text" name="${fieldItem}"id="${fieldItem}id"><br/>`
+           });
+
+
+        class Field {
+
+            type;
+            name;
+            title;
+
+            constructor(_type, _name, _title) {
+                this.type = _type;
+                this.name = _name;
+                this.title = _title;
+            }
+        }
+
+
+
+
+        let fieldFirstName = new Field("text", "firstName", "FIRST NAME");
+        let lastName = new Field("text", "lastName", "LAST NAME")
+        let email = new Field("email", "emailfiled", "EMAIL ADDRESS")
+        let fieldage = new Field("number", "age", "AGE")
+
+
+        let fields = [fieldFirstName, lastName, email, fieldage];
+        fields.forEach(fieldItem => {
+            formElement.innerHTML += `<label for="${fieldItem.title}" id="${fieldItem.title}">${fieldItem.title}</label>: <br/><input type= "${fieldItem.type}name="${fieldItem.name}"id="${fieldItem}id"><br/>`
+        })
+
+//         class School{
+//     schoolName;
+//     constructor(schoolName){
+//         this.schoolName=schoolName;
+//     }
+// static stuMap(key,value){
+//     studentMap.set(key,value)
+// זוג  תרגיל של יעקב יצירת אובייקט עם פונקציה סטטית של מאפ שיוצרת
+// }
+// }
+// class Student{
+//     name;
+//     grade;
+//     gpa;
+//     constructor(name,grade,gpa){
+//         this.name=name;
+//         this.grade=grade;
+//         this.gpa=gpa;
+//     }
+// }
+// let studentMap=new Map();
+// let stu1=new Student("almito","1st",100)
+// let school1=new School("almugim")
+
+
+
+// School.stuMap(stu1,school1)
+// console.log(studentMap);
+
+
+
+    </script>
+</body>
+
+</html>

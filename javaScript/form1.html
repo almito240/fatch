@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+</head>
+<style>
+    
+   
+    
+
+
+    
+
+    span {
+        color: red;
+    }
+</style>
+
+<body>
+    <div class="container">
+    <form onsubmit=>
+    
+    <form onsubmit="return validate()">
+        <label for="fname">first name:</label>
+        <input type="text" name="fname" id="firstNameid"><span id="fnameSpan"></span><br />
+        <label for="lname">last name:</label>
+        <input type="text" name="lname" id="lastName"><span id="lnameSpan"></span><br />
+        <label for="email">email:</label>
+        <input type="email" name="email" id="email"><span></span><br />
+        <label for="phone">phone number:</label>
+        <input type="tel" name="phone" id="phone"><span></span><br />
+        <label for="age">age:</label>
+        <input type="age"name="age" id="age"><span></span><br />
+        <label for="lname">password :</label>
+        <input type="password" name="password" id="password"><br />
+        <label for="passwordAgain">password Again:</label>
+        <input type="password" name="passwordAgain" id="passwordAgain">
+        <span id="passwordsSpan"></span>
+        <br />
+        <button id="submitBtn" type="submit">send</button>
+        <br />
+        <button type="reset">reset</button>
+    </form>
+</div>
+    <script>
+        //הגדרת משתנים גלובאלים
+        var firstName = document.getElementById("firstName");
+        var lastName = document.getElementById("lastName");
+        var email = document.getElementById("email");
+        var phone = document.getElementById("phone");
+        var profilPic = document.getElementById("profilPic");
+        var firstPassword = document.getElementById("password");
+        var confirmPassword = document.getElementById("passwordAgain");
+        var submitBtn = document.getElementById("submitBtn");
+        // פעולות מיידיות לאחר טעינה        
+        window.onload = () => {
+            // firstPassword.addEventListener("input",changeToUpperCase)
+            firstName.addEventListener("change", checkFirstName)
+            confirmPassword.addEventListener("input", checkPasswords)
+        }
+        // פונקציות לבדיקת תאימות בין קלטים 
+        function validate() {
+
+        }
+        // פונקציה לבדיקת תאימות בין קלטים        
+
+        function checkFirstName() {
+            if (firstName.value.toLowerCase() != "almito") {
+                document.getElementById("fnameSpan").innerHTML = "You must be Jacob";
+                return false;
+            }
+            document.getElementById("fnameSpan").innerHTML = "";
+            return true;
+        }
+
+        function checkPasswords() {
+            if (firstPassword.value == confirmPassword.value) {
+            
+                document.getElementById("passwordsSpan").innerHTML = "passwords are correct"
+                return true;
+            }
+           
+            document.getElementById("passwordsSpan").innerHTML = "passwords are not the same, try again :("
+            return false;
+        }
+
+        function changeToUpperCase() {
+            inputFname.value = inputFname.value.toUpperCase();
+        }
+        function changeToLowerCase(element) {
+            element.value = element.value.toLowerCase();
+        }
+    </script>
+</body>

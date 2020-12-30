@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+
+<body>
+   
+        <input type="text" name="userFullName" id="userFullNameId" placeholder="FullName"><br/>
+        <input type="userpassword" name="userpassword" id="userpasswordId" placeholder="password"><br/>
+        <input type="text" name="useremail" id="useremailid" placeholder="email"><br>
+        <button id="btn" onclick="clickToLog()">login</button>
+        <script>
+
+            class Login {
+                userFullName;
+                userPassword;
+                userEmail;
+                constructor(userFullName = "", userPassword = "", userEmail = "") {
+                    this.userFullName = userFullName;
+                    this.userPassword = userPassword;
+                    this.userEmail = userEmail;
+                }
+            }
+            const corectUser = new Login("a", "y", "a");
+            const tryToLog = new Login();
+            function clickToLog() {
+                // tryToLog=new Login(userFullName,userPassword,userEmail)
+                tryToLog.userFullName = userFullNameId.value;
+                tryToLog.userPassword = userpasswordId.value;
+                tryToLog.userEmail = useremailid.value;
+                selector()
+            }
+
+function selector(){
+    if( JSON.stringify(corectUser)==JSON.stringify(tryToLog)){
+        alert(`WELLCOM ${tryToLog.userFullName}`)
+    }else{
+        alert(`try again`)
+    }
+}
+
+
+
+        </script>
+</body>
+
+</html>

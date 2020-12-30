@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #cotanier {
+        height: 600px;
+        width: 600px;
+        background: green;
+        position: relative;
+    }
+
+    #insideBox {
+        height: 200px;
+        width: 200px;
+        background: red;
+        position: absolute;
+    }
+</style>
+
+<body>
+    <div id="cotanier">
+        <div id="insideBox"></div>
+    </div>
+    <button id="stopPlay" onclick="moveBox()">PLAY</button>
+    <script>
+
+
+        var leftPosition = 0;
+        var setIntervalBox;
+        var toggle = false;
+        function moveBox() {
+            toggle = !toggle;
+            toggle?playBox():stopBox();
+        }
+        function playBox() {
+            setIntervalBox = setInterval (() => {
+                leftPosition++;
+                insideBox.style.left = leftPosition + "px";
+            }, 50);
+            stopPlay.innerHTML = "stop";
+        }
+        function stopBox() {
+            clearInterval(setIntervalBox);
+
+            stopPlay.innerHTML = "play"
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const num = []
+
+window.onload = () => {
+
+    for (let i = 0; i < 11; i++) {
+        num.push(i);
+    }
+    document.writeln(num + "<br><br>")
+    num.reverse((a, b) => a - b)
+    document.writeln(num ) // 10 to 0 by revers
+    num.sort(() => 0.5 - Math.random()) // random num by sort--> sort 0.5 - Math.random
+    for_button()
+    document.writeln("<p id='coppy'></p>")
+    document.writeln('<img id="pic">')
+}
+
+function for_button() {
+    for (let i = 0; i < num.length; i++) {
+        document.writeln(`<button onclick="clickToImge(${num[i]})">${num[i]}</button>`)
+
+    }
+}
+
+
+function clickToImge(picture) {
+    switch (picture) {
+        case 0:
+            coppy.innerHTML = ('to low');
+            pic.src = "/images/1.jpg";
+            break
+        case 1:
+            coppy.innerHTML = (" not enough")
+            pic.src = "/images/1.jpg";
+
+            break
+        case 2:
+            coppy.innerHTML = ("A little longer and you'd win.")
+            pic.src = "/images/1.jpg";
+
+            break
+        case 3:
+            coppy.innerHTML = ("You won first place.")
+            pic.src = "/images/1.jpg";
+
+            break
+        case 4:
+            coppy.innerHTML = ("You've exaggerated too much.")
+            pic.src = "/images/1.jpg";
+
+            break
+        case 5:
+            coppy.innerHTML = ("A little more maybe second place.")
+            pic.src = "/images/1.jpg";
+
+            break
+        case 6:
+            coppy.innerHTML = ("Second place greetings ")
+            pic.src = "/images/1.jpg";
+
+            break
+        case 7:
+            coppy.innerHTML = ("Third is good, too.")
+            pic.src = "/images/1.jpg";
+
+            break
+        case 8:
+            coppy.innerHTML = ("From here on out, it's already a loss.")
+            pic.src = "/images/1.jpg";
+
+            break
+        case 9:
+            coppy.innerHTML = ("Almost Lost")
+            pic.src = "/images/1.jpg";
+
+            break
+        case 10:
+            coppy.innerHTML = ("You're a loser.")
+            pic.src = "/images/1.jpg";
+
+            break
+
+    }
+}
+clickToImge()
+    </script>
+</body>
+</html>

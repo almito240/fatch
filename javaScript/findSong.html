@@ -1,0 +1,55 @@
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Document</title>
+   </head>
+   <body>
+       
+  
+<script>
+
+
+let songs = 
+[ 
+  {name: "Hard day night", singer: "Beatless"}, 
+  {name: "Help", singer: "Beatless"}  
+] 
+
+
+function isThisWhatImLookingFor(song) {
+let songNameImLookingFor = "Help";
+if (song.name == songNameImLookingFor) {
+    return true;
+}
+else {
+    return false;
+}
+}
+
+function songsFind() {
+let theFoundSong;
+
+for (let i = 0; i < songs.length; i++) {
+
+    let isThisOurSong = isThisWhatImLookingFor(songs[i]);
+
+    //console.log("Current song: " + songs[i].name + ", is found: " + isThisOurSong);
+
+    if (isThisOurSong) {
+        theFoundSong = songs[i];
+        break;
+    }
+}
+
+return theFoundSong;
+}
+
+
+
+
+
+</script>
+</body>
+</html>

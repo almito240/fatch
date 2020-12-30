@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="input">
+        <button id="btn" onclick="click1()">Click here</button>
+    </div>
+
+    <div></div>
+
+    <script>
+
+        let userInput = document.getElementById("input");
+
+        let div2 = document.querySelector("div").nextElementSibling;
+
+
+        function click1() {
+
+            div2.innerHTML = "<div></div><button >Click here</button>";
+            div2.firstChild.style = `background:${userInput.value};height:20px;width:20px;padding:20px;margin:20px`;
+          
+         
+
+            
+            for (let i = 0; i < 10; i++) {
+                let color = getRandomColor()
+                div2.innerHTML += `<div onmouseover=changeColor("${color}") style=background:${color};height:20px;width:20px;padding:20px;margin:20px;></div>`;
+            }
+            div2.querySelector("button").addEventListener("click",()=>changeColor('yellow'));
+            document.querySelector("div").childNodes[3].addEventListener("click",timer);
+
+        }
+
+ 
+
+        function changeColor(color) {
+            div2.firstChild.style = `background:${color};height:20px;width:20px;margin:20px;padding:20px`
+
+        }
+
+        function getRandomColor() {
+            var letters = "0123456789ABCDEF";
+            let color = "#";
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+          
+          return color;
+        }
+//         function timer(){
+//          setInterval(()=> click1(),3000)
+//      }
+
+//  var stoptimer=timer(){
+//  setInterval(()=> click1(),3000)
+//      }
+
+//  function stoptimer(){
+//      clearInterval(timer);
+
+//  }
+ 
+// }
+        
+
+        </script>
+    <script>
+     
+    </script>
+</body>
+</html>
