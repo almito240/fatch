@@ -1,28 +1,30 @@
-/* body{
-    display: grid;
-    grid-template-areas:"h1 h1 h1 h1"
-                        "img img img img"
-                        "tex tex tex tex";
-                        grid-column: ;
-                        
+body{
+padding: 0;
+margin: 0 ;
+background-color:rgb(223, 120, 120)
+} 
+#inputbtn{
+display: flex;
+justify-content: center;
+margin-bottom:5% ;
+margin-top:20px ;
 }
-#imgDiv {
-    /* grid-area:"img" ; */
-    /* vertical-align: top;
-    display: inline-block;
-    text-align: center;
-    width: 120px;
+
+#container{
+    display: flex;
+    justify-content: center;
 }
-img {
-    grid-area:"img" ;
-    width: 300px;
-    height: 400px;
-    background-color: rgb(231, 108, 108);
+#main{
+    display:grid;
+    grid-template-columns: auto auto auto;
+    grid-row-gap:50px ;
+    grid-column-gap:100px ;
 }
-#text {
-    grid-area: "tex";
-    display: none;
-} */ 
-#btn{
-    
+.imgclass{
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 5px 7px 5px 0;
+}
+.imgdiv{
+    width: 200px;
 }

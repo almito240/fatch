@@ -1,6 +1,6 @@
 //https://api.jikan.moe/v3/search/anime?q=abc {anime to search}
 let api = "https://api.jikan.moe/v3/search/anime"
-let result;
+
 
 
 function turnAnimaInfoToJson(input) {
@@ -18,18 +18,23 @@ async function getInfo(Input) {
         console.log(eror);
     }
     finally {
-        loader.innerHTML = ''
+        // loader.innerHTML = ''
 
     }
 }
 
 
-function clickToShow() {
-    getInfo(animaInput.value).then(() => {
+function myFunc(input) {
+    getInfo(input.value).then(() => {
         for (const iteratr of animaRes.results) {
-            main.innerHTML += `<div id='imgDiv'><img src="${iteratr.image_url}" alt=""><br/>title:${iteratr.title}<br/>score:${iteratr.score}<br/>synopsis:${iteratr.synopsis}</div>`
+            main.innerHTML += `<div id='imgDiv' class="imgdiv" >
+            <img class='imgclass' src="${iteratr.image_url}" alt="">
+            <h2>${iteratr.title}</h2>
+            <h4>score: ${iteratr.score}</h4>
+            <h4>synopsis: ${iteratr.synopsis}</h4>
+            </div>`
         }
     })
 }
 
-            
+myFunc("dbz")  
