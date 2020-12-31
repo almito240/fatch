@@ -1,6 +1,6 @@
 //https://api.jikan.moe/v3/search/anime?q=abc {anime to search}
 let api = "https://api.jikan.moe/v3/search/anime"
-
+let animaRes
 
 
 function turnAnimaInfoToJson(input) {
@@ -18,14 +18,14 @@ async function getInfo(Input) {
         console.log(eror);
     }
     finally {
-        // loader.innerHTML = ''
+        loader.innerHTML = ''
 
     }
 }
 
 
-function myFunc(input) {
-    getInfo(input.value).then(() => {
+function clickToShow() {
+    getInfo(animaInput.value).then(() => {
         for (const iteratr of animaRes.results) {
             main.innerHTML += `<div id='imgDiv' class="imgdiv" >
             <img class='imgclass' src="${iteratr.image_url}" alt="">
@@ -37,4 +37,4 @@ function myFunc(input) {
     })
 }
 
-myFunc("dbz")  
+            
