@@ -17,7 +17,7 @@ let qustions= new Map ();
 
 
 for (const key of categoryName.keys()) {
-   main.innerHTML += `<div id="categuryCard${key}" onmouseover=showOptions('${key}') onmouseout=hideOptions('${key}') class="card">
+   main.innerHTML += `<div id="categuryCard${key}"  onmouseover=showOptions('${key}') onmouseout=hideOptions('${key}') class="card">
    <h2 id="${key}key" onclick="showQustion('${key}')">${key}</h2>
 <div id="answerdiv${key}"  style="display:none"></div>
 </div>`
@@ -30,7 +30,7 @@ arrayAns.innerHTML+=`<h2 id="${key}question" style="display:none">${qustions.get
 }
 
 function showOptions(key) {
-   document.getElementById(`answerdiv${key}`).style.display = 'block'
+   document.getElementById(`answerdiv${key} class="answer"` ).style.display = 'block'
  
 }
 

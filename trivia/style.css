@@ -1,22 +1,39 @@
-#main{
-    display: flex;
+body{
+    margin:0px ;
+    padding: 0px;
+    background-color:rgb(19, 19, 80);
+}
 
+    #main{
+    display: flex;
     text-align: center;
     margin: 20px,auto;
  
 
 }
+#inputbtn{
+    display: flex;
+    justify-content: center;
+    margin-bottom:5% ;
+    margin-top:20px ;
+    }
+
+   
 
 .card{
+    margin-top:200px;
      border: 2px solid blue;
     border-radius: 20px;
    padding: 20px;
-   width: 200px;
-   height: 300px;
+   width: 100px;
+   height: 200px;
    margin-right: 20px;
    text-align: center;
    font-size: 40px;
    background: rgb(55,34,195);
 background: linear-gradient(0deg, rgba(55,34,195,1) 0%, rgba(236,45,253,1) 100%); 
+}
+.answer{
+    
 }
 
